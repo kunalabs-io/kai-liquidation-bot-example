@@ -1,41 +1,18 @@
 # Liquidation bot @kunalabs-io/kai
 
-A TypeScript-based liquidation bot for the Kai Finance protocol (https://kai.finance). This bot monitors lp positions and executes liquidations when necessary.
+An example of TypeScript-based liquidation bot for the Kai Finance protocol (https://kai.finance). This bot monitors lp positions and executes liquidations when necessary.
 
-## Features
+## Architecture Overview
 
-- Real-time position monitoring
-- Automated liquidation execution
-- Flash swap execution for liquidations
-- Prometheus metrics integration
+The bot consists of three core components working in sequence:
 
-## System Architecture
+1. **Rpc Position Monitor**: Watches and polls the chain for liquidatable positions
+2. **Liquidation Controller**: Processes detected positions and makes execution decisions
+3. **Flash Swap Executor**: Handles the actual liquidation transactions using flash swaps
 
-The bot consists of three main components:
+For detailed arhitecture reference, see the [Kai Finance Liquidation Framework](https://github.com/kunalabs-io/kai-ts-sdk?tab=readme-ov-file#liquidation-framework).
 
-1. **Position Monitor (`RpcPositionMonitor`)**
-
-   - Continuously watches for positions that need liquidation
-   - Polls the chain at regular intervals
-   - Triggers events when positions need liquidation
-
-2. **Liquidation Controller (`LiquidationController`)**
-
-   - Acts as the decision-making component
-   - Receives positions from the monitor
-   - Determines how to handle liquidations
-   - Coordinates with the executor to perform liquidations
-
-3. **Flash Swap Executor (`FlashSwapExecutor`)**
-   - Handles the actual execution of liquidations
-   - Signs and sends transactions to the network
-   - Performs flash swaps for liquidation
-
-The system follows a clear flow:
-
-1. Monitor detects positions needing liquidation
-2. Controller receives and processes these positions
-3. Executor carries out the actual liquidation transactions
+The implementation includes Prometheus metrics integration for monitoring
 
 ## Installation
 

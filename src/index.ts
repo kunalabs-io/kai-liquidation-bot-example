@@ -47,11 +47,6 @@ program
     'Pyth URL',
     'https://hermes.pyth.network'
   )
-  .requiredOption(
-    '--private-key <string>',
-    'Private key for signing transactions',
-    process.env.PRIVATE_KEY
-  )
   .option(
     '--pyth-connection-timeout-sec <number>',
     'Pyth connection timeout in seconds',
@@ -84,7 +79,10 @@ program
 
     // Create Ed25519 keypair from private key for signing Sui transactions
     // https://sdk.mystenlabs.com/typescript/cryptography/keypairs
-    const signer = Ed25519Keypair.fromSecretKey(options.privateKey)
+    if (!process.env.PRIVATE_KEY) {
+      throw new Error('PRIVATE_KEY environment variable is required')
+    }
+    const signer = Ed25519Keypair.fromSecretKey(process.env.PRIVATE_KEY)
 
     const liquidationBackendClient = new LiqudationBackendClient(
       options.backendUrl

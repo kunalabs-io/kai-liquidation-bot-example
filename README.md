@@ -22,6 +22,10 @@ Install dependencies:
 pnpm install
 ```
 
+```bash
+pnpm build
+```
+
 Add the environment variable `PRIVATE_KEY` to get a keypair by following the [Mysten Labs SDK guide](https://sdk.mystenlabs.com/typescript/cryptography/keypairs#deriving-a-keypair-from-a-bech32-encoded-secret-key)
 
 ## Usage

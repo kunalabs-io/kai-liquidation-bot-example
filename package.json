@@ -30,7 +30,7 @@
     "globals": "^16.2.0"
   },
   "dependencies": {
-    "@kunalabs-io/kai": "^0.20.0",
+    "@kunalabs-io/kai": "^0.21.0",
     "@mysten/sui": "1.28.2",
     "@opentelemetry/exporter-prometheus": "^0.202.0",
     "@opentelemetry/resources": "^2.0.1",

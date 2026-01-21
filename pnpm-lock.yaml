@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@kunalabs-io/kai':
-        specifier: ^0.21.0
-        version: 0.21.0(@jest/transform@29.7.0)(@jest/types@29.6.3)(esbuild@0.25.5)(typescript@5.8.3)
+        specifier: ^0.24.0
+        version: 0.24.0(@jest/transform@29.7.0)(@jest/types@29.6.3)(esbuild@0.25.5)(typescript@5.8.3)
       '@mysten/sui':
         specifier: 1.45.0
         version: 1.45.0(typescript@5.8.3)
@@ -1012,8 +1012,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  '@kunalabs-io/kai@0.21.0':
-    resolution: {integrity: sha512-lkCx7RNwFyu3jJ7AF66q1u4nXFmNL4gIZIxF/cGssKEATawMF+oDNyex5MTvwOnwzUe3vXUNfLKDeWoRT2SiFA==}
+  '@kunalabs-io/kai@0.24.0':
+    resolution: {integrity: sha512-quxLMZaPSZw39nt3dd2M9qqbeyow830YEs7LbHdT1wsdCECZ4ewwEL/mCSFV8TXw7O8z0X0evLtCJmIZ7r5UMg==}
 
   '@mysten/bcs@1.9.2':
     resolution: {integrity: sha512-kBk5xrxV9OWR7i+JhL/plQrgQ2/KJhB2pB5gj+w6GXhbMQwS3DPpOvi/zN0Tj84jwPvHMllpEl0QHj6ywN7/eQ==}
@@ -4145,7 +4145,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@kunalabs-io/kai@0.21.0(@jest/transform@29.7.0)(@jest/types@29.6.3)(esbuild@0.25.5)(typescript@5.8.3)':
+  '@kunalabs-io/kai@0.24.0(@jest/transform@29.7.0)(@jest/types@29.6.3)(esbuild@0.25.5)(typescript@5.8.3)':
     dependencies:
       '@cetusprotocol/aggregator-sdk': 0.12.1(@jest/transform@29.7.0)(@jest/types@29.6.3)(esbuild@0.25.5)(typescript@5.8.3)
       '@mysten/sui': 1.45.0(typescript@5.8.3)
